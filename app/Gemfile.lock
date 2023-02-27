@@ -7,7 +7,7 @@ GEM
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
-    json (2.0.2)
+    json (2.6.3)
     multi_json (1.15.0)
     pg (1.2.3)
     puma (3.12.6)
