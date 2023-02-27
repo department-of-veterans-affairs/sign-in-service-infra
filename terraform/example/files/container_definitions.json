@@ -1,0 +1,40 @@
+[
+  {
+    "name": "app",
+    "cpu": 512,
+    "memoryReservation": 128,
+    "image": "basic_app:v0.0.1",
+    "essential": true,
+    "portMappings": [
+      {
+        "hostPort": 0,
+        "protocol": "tcp",
+        "containerPort": 3000
+      }
+    ],
+    "environment": [
+      {
+        "name": "RACK_ENV",
+        "value": "production"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${cloudwatch_log_group}",
+        "awslogs-region": "${cloudwatch_log_region}",
+        "awslogs-stream-prefix": "${service_name}"
+      }
+    },
+    "secrets": [
+      {
+        "valueFrom": "${database_url_secret_arn}",
+        "name": "DATABASE_URL"
+      },
+      {
+        "valueFrom": "${redis_url_secret_arn}",
+        "name": "REDIS_URL"
+      }
+    ]
+  }
+]
