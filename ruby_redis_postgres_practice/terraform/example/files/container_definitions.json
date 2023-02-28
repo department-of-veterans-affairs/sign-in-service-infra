@@ -3,7 +3,7 @@
     "name": "app",
     "cpu": 512,
     "memoryReservation": 128,
-    "image": "basic_app:v0.0.1",
+    "image": "008577686731.dkr.ecr.us-gov-west-1.amazonaws.com/ihundere-identity:v0.0.1",
     "essential": true,
     "portMappings": [
       {
