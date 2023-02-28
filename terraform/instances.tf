@@ -166,5 +166,5 @@ resource "aws_iam_role" "service_ec2" {
 
 resource "aws_iam_role_policy_attachment" "service_ecs_container_role" {
   role       = aws_iam_role.service_ec2.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
+  policy_arn = "arn:aws-us-gov:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
 }

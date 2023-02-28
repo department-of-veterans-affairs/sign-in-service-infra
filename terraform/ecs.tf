@@ -135,7 +135,7 @@ resource "aws_iam_role_policy_attachment" "service_task_execution_role_secrets" 
 
 resource "aws_iam_role_policy_attachment" "service_task_execution_role_amazon" {
   role       = aws_iam_role.service_execution_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+  policy_arn = "arn:aws-us-gov:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
 
 resource "aws_iam_role" "service_ecs_service_role" {
@@ -159,5 +159,5 @@ resource "aws_iam_role" "service_ecs_service_role" {
 
 resource "aws_iam_role_policy_attachment" "service_ecs_service_role_amazon" {
   role       = aws_iam_role.service_ecs_service_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"
+  policy_arn = "arn:aws-us-gov:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"
 }

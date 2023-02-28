@@ -14,7 +14,7 @@ terraform {
 
 module "test_ecs_rds_redis_module" {
   source       = "../"
-  service_name = "Sign-in-Service"
+  service_name = "sign-in-service-test"
 
   tags = {
     Name      = "ianhundere-Sign-in-Service"
